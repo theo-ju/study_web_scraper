@@ -4,7 +4,5 @@ a = math.ceil(1.2)
 
 print(a)
 
-awa
-
 
 
