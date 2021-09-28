@@ -44,7 +44,7 @@ def extract_indeed_jobs(last_page):
 
             # Job ID
             job_id = card['id'].split('_')[1]
-            extracted_job['id'] = job_id
+            extracted_job['job_id'] = job_id
 
             # Job Title
             job_title = card.find('h2', {'class': 'jobTitle'})
@@ -94,8 +94,8 @@ def extract_indeed_jobs(last_page):
     return extracted_jobs
 
 
-def get_jobs():
-    jobs = extract_indeed_jobs(10)
+def get_jobs(last_page = 1):
+    jobs = extract_indeed_jobs(last_page)
 
     return jobs
 
