@@ -3,7 +3,7 @@ from save import save_to_file
 
 
 def main():
-	i_jobs = get_indeed_jobs(15)
+	i_jobs = get_indeed_jobs(2)
 	jobs = i_jobs
 	save_to_file(jobs)
 

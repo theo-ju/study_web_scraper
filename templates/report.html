@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+        display:grid;
+        gap:20px;
+        grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+</head>
+<body>
+<h1>Search Result</h1>
+<h3>Found {{countResult}} results of job about '{{searchingBy}}'.</h3>
+<Section>
+    <h4>Title</h4>
+    <h4>Company</h4>
+    <h4>Location</h4>
+    <h4>Link</h4>
+    {% for job in Jobs %}
+    <span>{{job.job_title}}</span>
+    <span>{{job.company_name}}</span>
+    <span>{{job.company_location}}</span>
+    <a href="{{job.job_link}}" target="_blank">More</a>
+    {% endfor %}
+</Section>
+</body>
+</html>
